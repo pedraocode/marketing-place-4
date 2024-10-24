@@ -13,6 +13,7 @@ body {
    
 }
 
+
 .topo {
     display: flex;
     justify-content: space-between;
@@ -22,22 +23,10 @@ body {
     flex-wrap: nowrap; /* Prevents elements from wrapping to the next line */
 }
 
-.topo > * {
-    font-size: calc(1rem + 0.5vw); /* Adjusts font size based on viewport width */
+
+textarea {
+    margin-right: 40px; /* Adiciona 20px de margem à direita */
 }
-
-.meio, .direitax {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.meio img, .meio button, .direitax img, .direitax button {
-    max-width: 100%; /* Allows elements to shrink */
-    height: auto; /* Maintains aspect ratio */
-}
-
-
 
 
 .b {
@@ -59,8 +48,10 @@ body {
 
 .meio {
     display: flex;
-    gap: 20px;
-    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    width: 100%; /* Garantir que ocupe a largura total disponível */
+    max-width: 1200px; /* Definir um limite máximo de largura */
 }
 
 .ajeitar {
@@ -69,15 +60,17 @@ body {
 
 .esquerda {
     margin-right: auto;
+    margin-bottom: -20px;
 }
 .direita {
     display: flex;
-   margin-right: 270px;
-   margin-top: 50px;
+    align-items: flex-end;
+ margin-right: 270px;
+
     gap: 10px;
 }
 
-.direita button.va {
+.direita  button.va {
     display: flex;
     align-items: center;
    border: none;
@@ -92,6 +85,34 @@ body {
 }
 
 .direita img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-bottom: -5px;
+}
+.direitax {
+    display: flex;
+    align-items: flex-end;
+ 
+
+    gap: 10px;
+}
+
+.direitax button.va {
+    display: flex;
+    align-items: center;
+   border: none;
+    width: 157px;
+    height: 40px;
+    padding: 0px 16px;
+    gap: 8px;
+    border-radius: 10px;
+    background-color: var(--Brand-orange-base, #F24D0D);
+    color: white;
+    font-size: 14px;
+}
+
+.direitax img {
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -128,7 +149,7 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 20px;
-    gap: 40px;
+    gap: 10px;
     width: 100%;
     max-width: 1030px; /* Limita a largura máxima da div */
     margin: 0 auto; /* Centraliza a div horizontalmente */
@@ -257,6 +278,15 @@ opacity: 0px;
     border: none;
     border-bottom: 1px solid var(--Grayscale-gray-100, #ADADAD);
 }
+.textarea {
+    max-width: 100%; /* Mantém 100% da largura da caixa */
+    margin-right: 20px; /* Adiciona uma margem à direita */
+    padding: 10px; /* Padding interno para conforto ao digitar */
+    border: none;
+
+}
+
+
 
 .juntos {
     display: flex;
@@ -352,49 +382,8 @@ align-items: flex-start;
 /* Ajuste geral para telas menores */
 /* Topo: Ajuste para manter os elementos alinhados horizontalmente e não em coluna */
 /* Add media queries to adjust the size of elements based on screen width */
-@media (max-width: 1200px) {
-    .topo > * {
-        font-size: calc(0.9rem + 0.3vw); /* Adjusts font size for smaller screens */
-    }
 
-    .meio img, .meio button, .direitax img, .direitax button {
-        max-width: 80%; /* Adjusts the maximum width for smaller screens */
-    }
-}
 
-@media (max-width: 768px) {
-    .topo > * {
-        font-size: calc(0.8rem + 0.2vw); /* Adjusts font size for even smaller screens */
-    }
-
-    .meio img, .meio button, .direitax img, .direitax button {
-        max-width: 60%; /* Adjusts the maximum width for even smaller screens */
-    }
-}
-@media (max-width: 1200px) {
-    .topo {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-
-    }
-
-    .topo > * {
-        font-size: calc(1rem + 0.5vw); /* Adjusts font size based on viewport width */
-    }
-
-    .direita, .meio {
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-    
-    .direita, .meio {
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-    
-}
 
 /* Semitopo: Centraliza o título da esquerda em telas menores */
 @media (max-width: 1024px) {
@@ -409,8 +398,14 @@ align-items: flex-start;
     
     .semitopo .esquerda {
         margin-left: 0;
+       margin-left: 20px;
+
         text-align: center;
     }
+    .direita {
+        margin-left: 20px;
+    }
+
 }
 
 /* Colocar o content em coluna mais cedo e evitar que ocupe a largura total */
@@ -424,8 +419,8 @@ align-items: flex-start;
     }
     
     .right-content {
-        width: 100%;
-        max-width: 500px;
+        width: auto;
+
     }
     
     .gignte {
@@ -436,14 +431,7 @@ align-items: flex-start;
 
 /* Ajustes para telas menores de 768px */
 @media (max-width: 768px) {
-    .topo {
-        flex-wrap: nowrap; /* Mantém os elementos em uma linha */
-        justify-content: space-between;
-    }
-    
-    .topo > * {
-        font-size: 0.9rem; /* Diminui gradualmente o tamanho dos elementos */
-    }
+
 
     .direita {
         margin-right: 0;
@@ -457,10 +445,6 @@ align-items: flex-start;
     }
     
 
-    
-    .right-content {
-        max-width: 100%;
-    }
 
     .semitopo {
         text-align: left; /* Ajuste o alinhamento para a esquerda */
@@ -469,16 +453,10 @@ align-items: flex-start;
   
 }
 
+
 /* Ajuste adicional para telas muito pequenas (ex: 600px) */
 @media (max-width: 600px) {
-    .topo {
-        flex-direction: column;
-        align-items: flex-start; /* Empilha os elementos do topo */
-    }
-    
-    .topo > * {
-        font-size: 0.8rem; /* Diminui ainda mais o tamanho dos elementos */
-    }
+
 
     .content {
         width: 90%;
@@ -491,9 +469,47 @@ align-items: flex-start;
         width: 100%;
 
     }
+    .right-content {
+        width: auto;
+    }
 }
 
 
+@media (max-width: 768px) {
+    .semitopo .esquerda {
+        margin-left: 5%;
+        text-align: left;
+    }
 
+    .direita {
+        margin-right: 0;
+    }
 
+    .content {
+        width: 90%;
+        align-items: flex-start;
+    }
 
+    .right-content {
+        max-width: 100%;
+    }
+}
+
+/* Para telas menores que 600px */
+@media (max-width: 600px) {
+    .semitopo .esquerda {
+        margin-left: 0;
+    }
+
+    .direita {
+        margin-right: 0;
+    }
+
+    .content {
+        width: 90%;
+    }
+
+    .gignte {
+        width: 100%;
+    }
+}

@@ -7,45 +7,48 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Abre o dropdown logo abaixo da caixa */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajuste de posição para centralizar */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2; /* Certifica-se de que sobreponha outros elementos */
+}
 
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
 
-        .dropdown-content a:hover, .dropdown-content a.selected {
-            background-color: #f1f1f1;
-            color: darkorange; /* Laranja escuro */
-        }
+.dropdown-content a:hover, .dropdown-content a.selected {
+    background-color: #f1f1f1;
+    color: darkorange; /* Laranja escuro */
+}
 
-        .show {
-            display: block;
-        }
+.show {
+    display: block;
+}
 
-        .hide {
-            display: none;
-        }
+.hide {
+    display: none;
+}
     </style>
 </head>
 <body>
     <div class="tudo">
         <div class="topo">
-            <div class="dois-prime">
+  
             <div class="logo">
                 <img src="Logo.png" alt="">
             </div>
@@ -55,7 +58,7 @@
                 <img src="package.svg" alt="">
                 <button class="a">Produtos</button>
             </div>
-            </div>
+           
             <div class="direitax">
                 <button class="va"><img class="ajeitar" src="plus-sign.svg" alt="">Novo produto</button>
                 <img src="User.jpg" alt="">
@@ -175,4 +178,4 @@
         }
     </script>
 </body>
-</html>
+</html> 
