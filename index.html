@@ -15,15 +15,15 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%; /* Abre o dropdown logo abaixo da caixa */
-    left: 50%; /* Centraliza horizontalmente */
+    top: 40px; /* Abre o dropdown logo abaixo da caixa */
+    right: -255px; /* Centraliza horizontalmente */
     transform: translateX(-50%); /* Ajuste de posição para centralizar */
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 500px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 2; /* Certifica-se de que sobreponha outros elementos */
 }
-
+ 
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -48,7 +48,7 @@
 <body>
     <div class="tudo">
         <div class="topo">
-  
+ 
             <div class="logo">
                 <img src="Logo.png" alt="">
             </div>
@@ -61,16 +61,18 @@
            
             <div class="direitax">
                 <button class="va"><img class="ajeitar" src="plus-sign.svg" alt="">Novo produto</button>
-                <img src="User.jpg" alt="">
+                <img class="usae" src="User.jpg" alt="">
             </div>
         </div>
         <div class="semitopo">
+         
             <div class="esquerda">
                 <img class="nove" src="arrow-left-02.svg" alt="">
                 <a class="oito" href="#">Voltar</a>
                 <h1 class="sete">Editar produto</h1>
                 <p>Gerencie as informações do produto cadastrado</p>
             </div>
+     
             <div class="direita">
                 <img class="ajeitar" src="tick-02.svg" alt="">
                 <a href="#" class="diminui">Marcar como vendido</a>
@@ -178,4 +180,4 @@
         }
     </script>
 </body>
-</html> 
+</html>

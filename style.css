@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(250, 242, 242);
+    overflow-x: hidden;
 }
 
 .tudo {
@@ -22,7 +23,7 @@ body {
     background-color: #FDF3F0;
     flex-wrap: nowrap; /* Prevents elements from wrapping to the next line */
 }
-
+ 
 
 textarea {
     margin-right: 40px; /* Adiciona 20px de margem à direita */
@@ -59,15 +60,14 @@ textarea {
 }
 
 .esquerda {
-    margin-right: auto;
     margin-bottom: -20px;
 }
 .direita {
     display: flex;
     align-items: flex-end;
- margin-right: 270px;
+ margin-right: 350px;
 
-    gap: 10px;
+    gap: 80px;
 }
 
 .direita  button.va {
@@ -89,6 +89,8 @@ textarea {
     width: 40px;
     height: 40px;
     margin-bottom: -5px;
+    gap: 20px;
+    margin-left: 120px;
 }
 .direitax {
     display: flex;
@@ -120,13 +122,18 @@ textarea {
 
 .semitopo {
     display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    justify-content: space-between;
     background-color: #FDF3F0;
+    gap: 2rem;
 }
-
+.direita {
+   gap:1rem ; 
+}
 .semitopo .esquerda {
-   margin-left: 265px;
+   margin-left: auto;
+ 
+ 
+  
 }
 
 .semitopo .esquerda h1 {
@@ -143,6 +150,7 @@ textarea {
 .semitopo .direita a {
     color: #F24D0D;
     margin-left: 10px;
+    margin-right: -70px;
 }
 
 .content {
@@ -315,7 +323,7 @@ textarea {
    margin-right: auto;
 }
 .input-group2 {
-    
+   
     width: 223px;
 height: 62px;
 margin-left: 40px;
@@ -390,17 +398,15 @@ align-items: flex-start;
     .semitopo {
         display: flex;
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         padding: 10px;
     }
-    
+   
     .semitopo .esquerda {
-        margin-left: 0;
-       margin-left: 20px;
-
-        text-align: center;
+        margin-left: 20px;
+        text-align: left;
     }
     .direita {
         margin-left: 20px;
@@ -417,15 +423,18 @@ align-items: flex-start;
         max-width: 800px;
         padding: 20px;
     }
-    
+   
     .right-content {
         width: auto;
 
     }
-    
+   
     .gignte {
         width: 100%;
 
+    }
+    .usae {
+        display: none;
     }
 }
 
@@ -433,83 +442,46 @@ align-items: flex-start;
 @media (max-width: 768px) {
 
 
-    .direita {
-        margin-right: 0;
+    .direitax {
+        margin-left: 0;
     }
 
     .content {
         flex-direction: column;
-        align-items: flex-start; /* Alinha os elementos à esquerda */
+        align-items: center; /* Alinha os elementos à esquerda */
         width: 90%;
         padding: 10px;
     }
-    
+   
 
 
     .semitopo {
-        text-align: left; /* Ajuste o alinhamento para a esquerda */
+        text-align: center; /* Ajuste o alinhamento para a esquerda */
         align-items: flex-start;
     }
-  
+ 
 }
 
 
-/* Ajuste adicional para telas muito pequenas (ex: 600px) */
-@media (max-width: 600px) {
-
-
-    .content {
-        width: 90%;
-        padding: 10px;
-        flex-direction: column;
-        align-items: flex-start; /* Alinha à esquerda */
-    }
-
-    .gignte {
-        width: 100%;
-
-    }
-    .right-content {
-        width: auto;
-    }
-}
 
 
 @media (max-width: 768px) {
     .semitopo .esquerda {
         margin-left: 5%;
-        text-align: left;
+        text-align: center;
     }
 
-    .direita {
-        margin-right: 0;
-    }
+
 
     .content {
         width: 90%;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .right-content {
         max-width: 100%;
     }
-}
-
-/* Para telas menores que 600px */
-@media (max-width: 600px) {
-    .semitopo .esquerda {
-        margin-left: 0;
-    }
-
     .direita {
-        margin-right: 0;
-    }
-
-    .content {
-        width: 90%;
-    }
-
-    .gignte {
-        width: 100%;
+        margin-left: -90px;
     }
 }
